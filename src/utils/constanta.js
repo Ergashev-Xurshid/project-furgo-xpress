@@ -43,3 +43,39 @@ export const HomeTitle = [
     text:"Payment for services is made by credit or advanced system. A form of payment is in the discretion of the customer."
   },
 ]
+
+//services img and title
+import img1 from "../assets/img1.png"
+import img2 from "../assets/img2.png"
+import img3 from "../assets/img3.png"
+import img4 from "../assets/img4.png"
+import img5 from "../assets/img5.png"
+import img6 from "../assets/img6.png"
+
+
+export const servicesItem = [
+  {
+    image:img1,
+    title:"Transportation"
+  },
+  {
+    image:img2,
+    title:"Logistics"
+  },
+  {
+    image:img3,
+    title:"Towing Service"
+  },
+  {
+    image:img4,
+    title:"Maintenance Leasing"
+  },
+  {
+    image:img5,
+    title:"Distribution Services"
+  },
+  {
+    image:img6,
+    title:"Storage"
+  },
+]

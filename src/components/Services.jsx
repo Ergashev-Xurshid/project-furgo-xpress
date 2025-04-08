@@ -1,4 +1,5 @@
 import React from 'react'
+import { servicesItem } from '../utils/constanta'
 
 function Services() {
   return (
@@ -9,6 +10,19 @@ function Services() {
             <p className='mb-[10px] mt-[50px] leading-[1.5] font-normal text-[16px]'>
               Our transportation company has been offering a vast set of reliable solutions for businesses and individuals all over the world since our establishment.
             </p>
+          </div>
+          <div>
+            { servicesItem.map((item,i)=>(
+              <div key={i}>
+                <img src={item.image} alt={item.title} />
+                <div className='label-shape bg-[#3db7ef] text-white px-6 py-2 text-lg font-medium w-fit'>
+                  <i className='hidden'></i>
+                  <h3 className='font-normal text-[20px] text-white capitalize'>{item.title}</h3>
+                </div>
+              </div>
+            ))
+          
+            }
           </div>
     </section>
   )
