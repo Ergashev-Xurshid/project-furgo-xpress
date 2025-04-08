@@ -48,7 +48,7 @@ export const HomeTitle = [
 import img1 from "../assets/img1.png"
 import img2 from "../assets/img2.png"
 import img3 from "../assets/img3.png"
-import img4 from "../assets/img4.png"
+import img_4 from "../assets/img4.jpg"
 import img5 from "../assets/img5.png"
 import img6 from "../assets/img6.png"
 
@@ -67,7 +67,7 @@ export const servicesItem = [
     title:"Towing Service"
   },
   {
-    image:img4,
+    image:img_4,
     title:"Maintenance Leasing"
   },
   {

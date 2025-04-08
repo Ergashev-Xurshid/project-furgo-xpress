@@ -31,5 +31,21 @@ ul li.link-after a::after {
 }
 
 .label-shape {
-  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 95% 100%, 0 100%);
+}
+
+.hover-item > img {
+  filter: grayscale(0.4)
+}
+.hover-item:hover > img {
+  filter: grayscale(0)
+}
+
+
+.hover-item:hover > div{
+  left: 0;
+}
+
+.hover-item:hover > div span{
+  opacity: 1;
 }
