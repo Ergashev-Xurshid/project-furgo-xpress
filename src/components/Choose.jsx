@@ -3,7 +3,7 @@ import { BiSolidLike } from "react-icons/bi";
 import { FaUsers, FaLock } from "react-icons/fa";
 function Choose() {
   return (
-    <section className='py-[95px]  px-[10px] bg-[#172646] sm:px-[15px] md:px-[100px] lg:px-[80px] mx-auto'>
+    <section id='why' className='py-[95px]  px-[10px] bg-[#172646] sm:px-[15px] md:px-[100px] lg:px-[80px] mx-auto'>
       <div className='text-center'>
         <h1 className='text-[36px] mb-[21px] uppercase text-white font-bold'>WHY CHOOSE US</h1>
         <span className='inline-block w-[70px] h-[3px] bg-[#3db7ef]'></span>

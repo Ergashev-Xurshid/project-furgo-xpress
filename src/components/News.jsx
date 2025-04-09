@@ -4,7 +4,7 @@ import { HiMiniCalendarDateRange } from "react-icons/hi2";
 
 function News() {
   return (
-    <section className='py-[95px]  px-[10px]  sm:px-[15px] md:px-[100px] lg:px-[80px] '>
+    <section id='new' className='py-[95px]  px-[10px]  sm:px-[15px] md:px-[100px] lg:px-[80px] '>
       <div className='text-center'>
         <h1 className='text-[32px] mdplus:text-[36px] mb-[21px] uppercase text-black font-bold'>latest news</h1>
         <span className='inline-block w-[70px] h-[3px] bg-[#3db7ef]'></span>

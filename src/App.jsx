@@ -3,6 +3,7 @@ import './App.css'
 import About from './components/About'
 import Choose from './components/Choose'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import News from './components/News'
@@ -25,6 +26,7 @@ function App() {
         <Our/>
         <Contact/>
       </main>
+      <Footer/>
     </>
   )
 }

@@ -1,26 +1,26 @@
 export const menuLinks = [
   {
-    id:1,
+    id:"home",
     name:"Home"
   },
   {
-    id:2,
+    id:"about",
     name:"About Us"
   },
   {
-    id:3,
+    id:"our",
     name:"Our services"
   },
   {
-    id:4,
+    id:"why",
     name:"Why Us"
   },
   {
-    id:5,
+    id:"new",
     name:"News"
   },
   {
-    id:6,
+    id:"contacts",
     name:"Contacts"
   },
 ] 

@@ -25,7 +25,7 @@ function Home() {
   const activeItem = HomeTitle.find(item => item.id === isTitle);
 
   return (
-    <section className='relative home-bg h-[580px] w-full flex flex-col items-center justify-center'>
+    <section id='home' className='relative home-bg h-[580px] w-full flex flex-col items-center justify-center '>
       {activeItem && (
         <div
           key={activeItem.id} 

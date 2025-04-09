@@ -3,7 +3,7 @@ import { aboutImg } from '../assets'
 
 function About() {
   return (
-    <section className='py-[95px] container px-[10px] sm:px-[15px] md:px-[100px] lg:px-[80px] mx-auto'>
+    <section id='about' className='py-[95px] container px-[10px] sm:px-[15px] md:px-[100px] lg:px-[80px] mx-auto'>
       <div className='text-center'>
         <h1 className='text-[36px] mb-[21px] uppercase text-black font-bold'>company at a glance</h1>
         <span className='inline-block w-[70px] h-[3px] bg-[#3db7ef]'></span>
