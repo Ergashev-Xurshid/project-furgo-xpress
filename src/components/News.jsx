@@ -11,22 +11,22 @@ function News() {
       </div>
       <div className="flex flex-col lg:flex-row gap-5 mt-[50px]">
         {newsItems.map((item, i) => (
-          <div key={i} className="flex flex-col items-center max-lg:w-full lg:w-1/3">
+          <div key={i} className="flex flex-col items-center max-lg:w-full  lg:w-1/3">
             <div className="w-full h-[270px] mt-10">
               <img className="w-full h-full object-cover" src={item.img} alt={item.title} />
             </div>
 
-            <div className="flex flex-col items-center text-center mt-4">
-              <h2 className="font-bold text-[#3db7ef] text-[20px]">
+            <div className="flex flex-col max-lg:items-center  mt-4">
+              <h2 className="font-bold text-[#3db7ef]  text-[20px]">
                 {item.title}
               </h2>
 
-              <div className="mt-[15px] flex items-center gap-3 text-[#b7b7b7]">
+              <div className="mt-[15px] flex items-center gap-3 text-[#b7b7b7] ">
                 <HiMiniCalendarDateRange />
                 <p className="font-light text-[16px]">{item.date}</p>
               </div>
 
-              <p className="text-black font-light text-[16px] mt-[15px]">
+              <p className="text-black max-lg:text-center font-light text-[16px] mt-[15px]">
                 {item.text}
               </p>
             </div>

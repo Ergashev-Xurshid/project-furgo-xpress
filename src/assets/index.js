@@ -2,3 +2,8 @@ export { default as logo } from "./poroject-2-logo.png";
 export { default as left } from "./left.png";
 export { default as menu } from "./humberger.png";
 export { default as aboutImg } from "./about-img.png";
+export { default as carusel1 } from "./carusel-1.png";
+export { default as carusel2 } from "./carusel-2.png";
+export { default as carusel3 } from "./carusel-3.png";
+export { default as carusel4 } from "./carusel-4.png";
+export { default as carusel5 } from "./carusel-5.png";

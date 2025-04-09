@@ -49,3 +49,24 @@ ul li.link-after a::after {
 .hover-item:hover > div span{
   opacity: 1;
 }
+
+.carusel::after{
+  content: "";
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.carusel::before{
+  content: "";
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}

@@ -44,6 +44,7 @@ export const HomeTitle = [
   },
 ]
 
+
 //services img and title
 import img1 from "../assets/img1.png"
 import img2 from "../assets/img2.png"
@@ -100,8 +101,41 @@ export const newsItems = [
   },
   {
     img:news3,
-    title:"Behind the Wheel: A Day in the Life of a Town Cargo Driver",
+    title:"A Day in the Life of a Town Cargo Driver",
     date:"January 28, 2025, 08:30 AM",
     text:"Ever wondered what it’s like to be a professional truck driver? Take a journey with one of our experienced drivers as they navigate long highways, manage schedules, and ensure your goods arrive safely."
+  },
+]
+
+// carusel Imgs 
+
+import { 
+  carusel1,
+  carusel2,
+  carusel3,
+  carusel4,
+  carusel5,
+} from "../assets"
+
+export const caruselImg = [
+  {
+    id:1,
+    img:carusel1
+  },
+  {
+    id:2,
+    img:carusel2
+  },
+  {
+    id:3,
+    img:carusel3
+  },
+  {
+    id:4,
+    img:carusel4
+  },
+  {
+    id:5,
+    img:carusel5
   },
 ]

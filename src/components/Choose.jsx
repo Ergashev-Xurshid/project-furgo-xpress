@@ -20,7 +20,7 @@ function Choose() {
         </div>
         <div className='max-lg:mt-[30px] flex flex-col lg:flex-row max-lg:text-center justify-center  gap-5'>
           <span className='w-[80px] h-[80px] rounded-full bg-[#3db7ef] flex items-center justify-center mx-auto'>
-            <BiSolidLike color='white' size={44} />
+            <FaUsers color='white' size={44} />
           </span>
           <div className='w-full lg:w-[60%] mx-auto'>
             <h2 className='font-bold text-white text-[22px] mb-[10px]'>Best Service</h2>
@@ -29,7 +29,7 @@ function Choose() {
         </div>
         <div className='max-lg:mt-[30px] flex flex-col lg:flex-row max-lg:text-center justify-center  gap-5'>
           <span className='w-[80px] h-[80px] rounded-full bg-[#3db7ef] flex items-center justify-center mx-auto'>
-            <BiSolidLike color='white' size={44} />
+            <FaLock color='white' size={44} />
           </span>
           <div className='w-full lg:w-[60%] mx-auto'>
             <h2 className='font-bold text-white text-[22px] mb-[10px]'>Best Service</h2>
