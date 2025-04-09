@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Services() {
   return (
-    <section className=' py-[95px] container bg-[#f5f5f5] px-[10px] sm:px-[15px] md:px-[50px] lg:px-[80px] mx-auto'>
+    <section className=' py-[95px]  bg-[#f5f5f5] px-[10px] sm:px-[15px] md:px-[50px] lg:px-[80px] mx-auto'>
           <div className='mx-auto text-center w-full lg:w-[50%]'>
             <h1 className='text-[36px] mb-[21px] uppercase text-black font-bold'>our services</h1>
             <span className='inline-block w-[70px] h-[3px] bg-[#3db7ef]'></span>
