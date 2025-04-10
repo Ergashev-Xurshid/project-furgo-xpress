@@ -34,7 +34,7 @@ function About({ setIsOpen }) {
           <img src={aboutImg} alt="track" />
         </div>
         <div className='flex-1 max-lg:mt-[50px]'>
-          <div className='flex items-start flex-col '>
+          <div className='flex items-center md:items-start flex-col '>
             <p className='mb-[10px] lg:text-left text-center leading-[1.5] font-light text-[16px]'>
             Our transportation company with 30 years of experience is you best choice for shipping cargo of any size, storage, packing or delivering wares to your customers. Our professional employees will take care of your goods, whenever you send them.
             </p>
