@@ -1,38 +1,39 @@
+
 import React, { useState } from 'react'
+import { IoCloseSharp } from "react-icons/io5";
 import { toast } from 'react-toastify';
-function Contact() {
+
+
+function Modal({setIsOpen}) {
 
   const [formData, setFormData] = useState({
-    name: "",
-    lastname: "",
-    phone: "",
+    name:"",
+    lastname:"",
+    phone:+1,
     email: "",
     message: "",
-    type: "",
   });
-
+  
   const botToken = "8017008549:AAEIl6pyQPJ56mzGhQoPtBtxAPGUhyLhNeY";
   const chatId = "6539046942";
-
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const text = `
-      Yangi xabar!\n
-      Ism: ${formData.name}\n
-      Familya: ${formData.lastname}\n
-      Tel: ${formData.phone}\n
-      Email: ${formData.email}\n
-      Rol: ${formData.type}\n
+      Yangi xabar!\n\n 
+      Ism: ${formData.name}\n\n 
+      Familya: ${formData.lastname}\n\n
+      Tel: ${formData.phone}\n\n
+      Email: ${formData.email}\n\n 
       Xabar: ${formData.message}`;
-
-
+  
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
+  
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -43,42 +44,44 @@ function Contact() {
           parse_mode: "Markdown",
         }),
       });
-
+  
       if (response.ok) {
         toast.success("Xabar yuborildi!");
-        setFormData({
+        setIsOpen(false)
+        setFormData({ 
           name: "",
-          lastname: "",
-          phone: "",
+          lastname:"",
+          phone: +1,
           email: "",
-          message: "",
-          type: "",
-        });
+          message: "", });
       } else {
         toast.error("Xabar yuborilmadi!");
       }
     } catch (error) {
       console.error("Error:", error);
-      toast.error("Xatolik ro'y berdi!");
+      toast.error("Xabar yuborilmadi!");
     }
   };
+  
+
 
   return (
-    <section id='contacts' className='bg-[#172646] py-[95px] px-[10px] sm:px-[15px] md:px-[50px] lg:px-[80px]'>
-      <div className='flex flex-col md:flex-row items-center gap-4 text-white'>
-        <form onSubmit={handleSubmit} className='flex-1 p-2'>
-          <h2 className='font-bold  text-[20px] text-white mb-[20px]'>
-            Contact Form
-          </h2>
+    <div className='max-w-[500px] fixed top-[15%] left-1/2 -translate-x-1/2'>
+      <form onSubmit={handleSubmit} className='relative border border-[#888] rounded-xl shadow-xl bg-white p-5'>
+          <div onClick={()=>setIsOpen(false)} className='absolute text-[#aaa] hover:text-black top-[2%] right-[2%] cursor-pointer'>
+            <IoCloseSharp size={18} />
+          </div>
           <div className='w-full mb-[25px]'>
-            <label className='inline-block mb-[10px]'>Select your role:</label>
+            <label className='inline-block mb-[10px] text-[#ccc]'>Select your role:</label>
             <div className='flex items-center gap-4' >
-              <label className='flex items-center gap-2 cursor-pointer'>
-              <input required type="radio" name='type' value="Owner" onChange={handleChange} />
-              <p>Owner</p>
+              <label className='text-[#ccc] flex items-center gap-2 cursor-pointer'>
+                <input
+                  required type="radio" name='type' className='cursor-pointer' />
+                <p>Owner</p>
               </label>
-              <label className='flex items-center gap-2 cursor-pointer'>
-                <input required type="radio" name='type' value="Company" onChange={handleChange} />
+              <label className='text-[#ccc] flex items-center gap-2 cursor-pointer'>
+                <input
+                  required type="radio" name='type' className='cursor-pointer' />
                 <p>Company</p>
               </label>
             </div>
@@ -91,7 +94,7 @@ function Contact() {
               name='name'
               type="text"
               placeholder='Your first name'
-              className='outline-hidden bg-white text-black text-[16px] py-[15px] px-[20px] font-light w-[100%]  lgplus:w-[50%]'
+              className='outline-hidden bg-white border border-[#ccc] text-black text-[16px] py-[15px] px-[20px] font-light w-[100%]  lgplus:w-[50%]'
             />
             <input
               required
@@ -100,21 +103,21 @@ function Contact() {
               onChange={handleChange}
               type="text"
               placeholder='Your last name'
-              className='outline-hidden bg-white  text-black text-[16px] py-[15px] px-[20px] font-light w-[100%] lgplus:w-[49%]'
+              className='outline-hidden bg-white border border-[#ccc]  text-black text-[16px] py-[15px] px-[20px] font-light w-[100%] lgplus:w-[49%]'
             />
             <input
               required
               value={formData.phone}
               name='phone'
               onChange={handleChange}
-              className='outline-hidden bg-white text-black text-[16px] py-[15px] px-[20px] font-light w-[100%]'
+              className='outline-hidden bg-white border border-[#ccc] text-black text-[16px] py-[15px] px-[20px] font-light w-[100%]'
               type="number" />
             <input
               required
               value={formData.email}
               name='email'
               onChange={handleChange}
-              className='outline-hidden bg-white text-black text-[16px] py-[15px] px-[20px] font-light w-[100%]'
+              className='outline-hidden bg-white border border-[#ccc] text-black text-[16px] py-[15px] px-[20px] font-light w-[100%]'
               type="email"
               placeholder='Your e-mail' />
             <textarea
@@ -122,7 +125,7 @@ function Contact() {
               value={formData.message}
               name='message'
               onChange={handleChange}
-              className='
+              className=' border border-[#ccc]
                 outline-none bg-white text-black text-[16px] 
                 py-[15px] px-[20px] font-light w-full 
                 resize-y h-[54px] min-h-[54px] max-h-[110px]'
@@ -131,23 +134,9 @@ function Contact() {
             <button type='submit' className=' mx-auto uppercase transition-all  duration-300 hover:bg-[#2e7dab]  mt-[20px] font-bold py-[14px] px-[36px] text-[16px] text-white bg-[#3db7ef]  cursor-pointer '>Send Message</button>
           </div>
         </form>
-        <div className='w-full md:flex-1'>
-          <div className="w-full h-[450px]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d103537.0891584459!2d-86.662692!3d35.811371!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886389625c70c971%3A0xdd8ee054cb8149b0!2s8331%20Horton%20Hwy%2C%20College%20Grove%2C%20TN%2037046!5e0!3m2!1sen!2sus!4v1744205687381!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-
-    </section>
+    </div>
+    
   )
 }
 
-export default Contact
+export default Modal

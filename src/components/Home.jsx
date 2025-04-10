@@ -32,7 +32,7 @@ function Home() {
           data-aos="fade-up"
           className='text-center w-full lg:w-[40%]'
         >
-          <h1 className='text-white text-[30px] sm:text-[54px] font-bold tracking-[2px]'>{activeItem.title}</h1>
+          <h1 className='text-white text-[28px] sm:text-[54px] font-bold tracking-[2px]'>{activeItem.title}</h1>
           <p className='mt-[30px] text-white text-[20px] sm:text-[22px]'>{activeItem.text}</p>
         </div>
       )}

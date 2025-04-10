@@ -9,7 +9,7 @@ export const menuLinks = [
   },
   {
     id:"our",
-    name:"Our services"
+    name:"Our Services"
   },
   {
     id:"why",

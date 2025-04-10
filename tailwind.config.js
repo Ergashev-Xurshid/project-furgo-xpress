@@ -5,13 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      screens: {
-        'mdplus': '770px', 
-        'lgplus': '1025px',
-      },
+    screens: {
+      'mdplus': '770px',
+      'lgplus': '1025px',
     },
+    extend: {},
   },
   plugins: [],
 }
-
